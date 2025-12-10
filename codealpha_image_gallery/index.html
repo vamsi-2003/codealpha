@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeAlpha - Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>IMAGE GALLERY</h1>
+    <p>Animals, Nature & More</p>
+  </header>
+
+  <!-- Upload + Filters Section -->
+  <section class="top-wrapper">
+
+    <!-- Upload on Left -->
+    <div class="upload-section-left">
+      <h2>Upload Image</h2>
+
+      <form id="uploadForm">
+
+        <div class="upload-field">
+          <label for="uploadCategory">Category</label>
+          <select id="uploadCategory">
+            <option value="animals">Animals</option>
+            <option value="nature" selected>Nature</option>
+            <option value="architecture">Architecture</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="travel">Travel</option>
+          </select>
+        </div>
+
+        <div class="upload-field">
+          <label for="uploadFile">Choose Image</label>
+          <input type="file" id="uploadFile" accept="image/*" required />
+        </div>
+
+        <button type="submit" class="upload-btn">Add to Gallery</button>
+      </form>
+
+      <p class="upload-note">Uploaded images stay only until refresh.</p>
+    </div>
+
+    <!-- Filters on Right -->
+    <section class="filters filters-top">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="animals">Animals</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="architecture">Architecture</button>
+      <button class="filter-btn" data-filter="vehicles">Vehicles</button>
+      <button class="filter-btn" data-filter="travel">Travel</button>
+    </section>
+
+  </section>
+
+  <!-- Gallery -->
+  <main class="gallery">
+
+    <!-- Animals -->
+    <div class="gallery-item" data-category="animals"><img src="images/animal_1.jpg" alt="Animal 1"></div>
+    <div class="gallery-item" data-category="animals"><img src="images/animal_2.jpg" alt="Animal 2"></div>
+    <div class="gallery-item" data-category="animals"><img src="images/animal_3.jpg" alt="Animal 3"></div>
+    <div class="gallery-item" data-category="animals"><img src="images/animal_4.jpg" alt="Animal 4"></div>
+
+    <!-- Nature (ONLY 7 images — as you required) -->
+    <div class="gallery-item" data-category="nature"><img src="images/nature1.jpg" alt="Nature 1"></div>
+    <div class="gallery-item" data-category="nature"><img src="images/nature2.jpg" alt="Nature 2"></div>
+    <div class="gallery-item" data-category="nature"><img src="images/nature3.jpg" alt="Nature 3"></div>
+    <div class="gallery-item" data-category="nature"><img src="images/nature4.jpg" alt="Nature 4"></div>
+    <div class="gallery-item" data-category="nature"><img src="images/nature5.jpg" alt="Nature 5"></div>
+    <div class="gallery-item" data-category="nature"><img src="images/nature6.png" alt="Nature 6"></div>
+    <div class="gallery-item" data-category="nature"><img src="images/nature7.png" alt="Nature 7"></div>
+
+    <!-- Architecture -->
+    <div class="gallery-item" data-category="architecture"><img src="images/architecture1.jpeg" alt="Architecture 1"></div>
+    <div class="gallery-item" data-category="architecture"><img src="images/architecture2.jpeg" alt="Architecture 2"></div>
+
+    <!-- Vehicles -->
+    <div class="gallery-item" data-category="vehicles"><img src="images/vehicle1.jpeg" alt="Vehicle 1"></div>
+    <div class="gallery-item" data-category="vehicles"><img src="images/vehicle2.jpeg" alt="Vehicle 2"></div>
+
+    <!-- Travel -->
+    <div class="gallery-item" data-category="travel"><img src="images/travel1.jpeg" alt="Travel 1"></div>
+    <div class="gallery-item" data-category="travel"><img src="images/travel2.jpeg" alt="Travel 2"></div>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="close-btn" id="lightboxClose">&times;</button>
+    <button class="nav-btn prev" id="lightboxPrev">&#10094;</button>
+    <img id="lightboxImg" src="" alt="Lightbox image" />
+    <button class="nav-btn next" id="lightboxNext">&#10095;</button>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

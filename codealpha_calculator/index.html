@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <h1>Basic Calculator</h1>
+    </header>
+
+    <main class="calculator">
+      <div class="calculator-display">
+        <div class="expression" id="expression">0</div>
+        <div class="preview" id="preview">&nbsp;</div>
+      </div>
+
+      <div class="calculator-buttons">
+        <button class="btn btn-func" data-type="all-clear">AC</button>
+        <button class="btn btn-func" data-type="clear">C</button>
+        <button class="btn btn-op" data-type="operator" data-value="%">%</button>
+        <button class="btn btn-op" data-type="operator" data-value="/">÷</button>
+
+        <button class="btn" data-type="number" data-value="7">7</button>
+        <button class="btn" data-type="number" data-value="8">8</button>
+        <button class="btn" data-type="number" data-value="9">9</button>
+        <button class="btn btn-op" data-type="operator" data-value="*">×</button>
+
+        <button class="btn" data-type="number" data-value="4">4</button>
+        <button class="btn" data-type="number" data-value="5">5</button>
+        <button class="btn" data-type="number" data-value="6">6</button>
+        <button class="btn btn-op" data-type="operator" data-value="-">−</button>
+
+        <button class="btn" data-type="number" data-value="1">1</button>
+        <button class="btn" data-type="number" data-value="2">2</button>
+        <button class="btn" data-type="number" data-value="3">3</button>
+        <button class="btn btn-op" data-type="operator" data-value="+">+</button>
+
+        <button class="btn btn-zero" data-type="number" data-value="0">0</button>
+        <button class="btn" data-type="decimal" data-value=".">.</button>
+        <button class="btn btn-equals" data-type="equals">=</button>
+      </div>
+
+      <p class="hint">
+        Tip: You can also use your keyboard (0–9, +, −, ×, ÷, ., Enter, Backspace, Esc).
+      </p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
